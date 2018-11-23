@@ -7,7 +7,7 @@ https://github.com/slugrustle/fx-5800P_progs
 ”ENTER -1 AFTER  LAST INPUT”:
 While 1:
    ”NUMBER”?➔B:
-   B=−1⇒Break:
+   B=-1⇒Break:
    If B≠Int(B):
       Then Cls:
       ”NUMBER MUST BE  AN INTEGER”:
