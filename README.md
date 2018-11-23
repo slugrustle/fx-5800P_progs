@@ -3,8 +3,8 @@
 This repository contains Greatest Common Denominator (GCD) and
 Least Common Multiple (LCM) program listings for the Casio 
 fx-5800P programmable calculator. This lovely calculator ships
-without these useful routines, but can be programmed to make
-up for this deficit.
+without these useful routines, but it can be programmed to 
+remedy this deficit.
 
 ## Getting Started
 
