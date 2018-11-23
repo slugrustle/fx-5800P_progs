@@ -4,15 +4,15 @@ https://github.com/slugrustle/fx-5800P_progs
 0➔DimZ:
 27➔DimZ:
 0➔A:
-”ENTER −1 AFTER  LAST INPUT”:
+”ENTER -1 AFTER  LAST INPUT”:
 While 1:
    ”NUMBER”?➔B:
+   B=−1⇒Break:
    If B≠Int(B):
       Then Cls:
       ”NUMBER MUST BE  AN INTEGER”:
       Stop:
    IfEnd:
-   B=−1⇒Break:
    If B<1 Or B≥1ₓ₁₀10:
       Then Cls:
       ”NUMBER MUST BE  >0 And <1ₓ₁₀10”:
@@ -33,7 +33,7 @@ If A<2:
 IfEnd:
 A➔D:
 Z[D]➔B:
-For D−1➔A To 1 Step −1:
+For D−1➔A To 1 Step -1:
    Z[A]➔C:
    While B≠C:
       If B≥C:
