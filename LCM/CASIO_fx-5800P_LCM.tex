@@ -134,9 +134,9 @@ For D\MINUS 1\STO A To 1 Step -1:\\
 \IDENT{3}C=0\CBR B\STO C:\\
 \IDENT{2}IfEnd:\\
 \IDENT{1}WhileEnd:\\
-\IDENT{1}If E\GEQ Z[I]:\\
-\IDENT{2}Then (E\DIV B)\MUL Z[I]\STO B:\\
-\IDENT{1}Else (Z[I]\DIV B)\MUL E\STO B:\\
+\IDENT{1}If E\GEQ Z[A]:\\
+\IDENT{2}Then (E\DIV B)\MUL Z[A]\STO B:\\
+\IDENT{1}Else (Z[A]\DIV B)\MUL E\STO B:\\
 \IDENT{1}IfEnd:\\
 \IDENT{1}If B\GEQ 1\EXPTEN10:\\
 \IDENT{2}Then Cls:\\
@@ -146,7 +146,7 @@ For D\MINUS 1\STO A To 1 Step -1:\\
 Next:\\
 Int(D\DIV 3)\STO E:\\
 D\MINUS 3\MUL E>0\CBR E+1\STO E:\\
-1\STO A:\\
+1\STO C:\\
 \strong{Lbl 1}:\\
 Cls:\\
 Locate 1,1,B:\\
