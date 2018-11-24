@@ -86,7 +86,8 @@ WhileEnd
    for GCD(Z[1], ..., Z[D]). D∈[2,27].
 
 Z[D]➔B: through Next: Evaluate B = GCD(Z[1],
-   ..., Z[D]). Thanks Euclid.
+   ..., Z[D]).  Uses GCD(β,γ,δ,ε) =
+   GCD(GCD(GCD(β,γ),δ),ε).
 
 1➔C: to end of program: Display result and 
    inputs.
@@ -108,6 +109,28 @@ E: Number of input argument display
 
 F: Identifier of most recently pressed
    key.
+
+
+[Notes]
+
+Lines 4, 10, 15, 22, and 28: The weird
+   spacing prevents text wrapping from
+   occurring in the middle of a word.
+
+Line 13: The fx-5800P can only
+   represent numbers on the range
+   [−1ₓ₁₀10,1ₓ₁₀10] as exact integers.
+
+Line 59: Pressing DEL (34) or EXIT (73)
+   ends the program.
+
+Line 64: Pressing + (77), ▲ (84),
+   ▶ (86), or EXE (47) cycles to the next
+   input argument display page.
+
+Line 69: Pressing − (67), ◀ (83), or
+   ▼ (85) cycles to the previous input
+   argument display page.
 
 
 [License]
