@@ -1,6 +1,6 @@
 # fx-5800P\_progs
 
-This repository contains Greatest Common Denominator (GCD) and
+This repository contains Greatest Common Divisor (GCD) and
 Least Common Multiple (LCM) program listings for the Casio 
 fx-5800P programmable calculator. This lovely calculator ships
 without these useful routines, but it can be programmed to 
