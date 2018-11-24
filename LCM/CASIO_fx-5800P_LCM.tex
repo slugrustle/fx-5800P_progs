@@ -80,11 +80,16 @@ includefoot
 \newcommand{\ALPHA}{^^^^03b1}
 \newcommand{\BETA}{^^^^03b2}
 \newcommand{\GAMMA}{^^^^03b3}
+\newcommand{\DELTA}{^^^^03b4}
+\newcommand{\EPSILON}{^^^^03b5}
+\newcommand{\UPTRIANG}{^^^^25b2}
+\newcommand{\RIGHTTRIANG}{^^^^25b6}
+\newcommand{\DOWNTRIANG}{^^^^25bc}
+\newcommand{\LEFTTRIANG}{^^^^25c0}
 
 \newdimen{\BaseIndent}
 \setlength{\BaseIndent}{3ex}
 \newcommand{\IDENT}[1]{\hspace*{#1\BaseIndent}}
-% \newcommand{\}{^^^^}
 
 \begin{document}
 \title{Least Common Multiple with User Input for the Casio fx-5800P Calculator}
@@ -178,14 +183,16 @@ While 1:\\
 WhileEnd
 \end{linenumbers}
 
+\strong{Program Outline}\\
 Lines 1\textendash 2: Set up memory for extra variables Z[\ALPHA] where \ALPHA\,\ELEM \,[1,27].
 
 Lines 3\textendash 31: User input of arguments for LCM(Z[1], ..., Z[D]). D\,\ELEM \,[2,27].
 
-Lines 32\textendash 53: Evaluate B = LCM(Z[1], ..., Z[D]). Uses LCM(\BETA,\GAMMA) = (\BETA\MUL\GAMMA)\DIV GCD(\BETA,\GAMMA) = (\BETA\DIV GCD(\BETA,\GAMMA))\MUL\GAMMA ~= (\GAMMA\DIV GCD(\BETA,\GAMMA))\MUL\BETA
+Lines 32\textendash 53: Evaluate B = LCM(Z[1], ..., Z[D]). Uses LCM(\BETA,\GAMMA) = (\BETA\MUL\GAMMA)\DIV GCD(\BETA,\GAMMA) = (\BETA\DIV GCD(\BETA,\GAMMA))\MUL\GAMMA ~= (\GAMMA\DIV GCD(\BETA,\GAMMA))\MUL\BETA ~and LCM(\BETA,\GAMMA,\DELTA,\EPSILON) = LCM(LCM(LCM(\BETA,\GAMMA),\DELTA),\EPSILON).
 
 Lines 54\textendash 84: Display result and inputs.
 
+\strong{Variable Descriptions}\\
 A: Index into extra variable memory.
 
 B: User input and LCM evaluation.
@@ -198,8 +205,19 @@ E: LCM evaluation and number of input argument display pages (3 inputs per page)
 
 F: Identifier of most recently pressed key.
 
-\vspace{2ex}
-\tiny{Written in 2018 by Ben Tesch. To the extent possible under law, the author has dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed without any warranty. Published under the CC0 1.0 Universal Public Domain Dedication; see \url{http://creativecommons.org/publicdomain/zero/1.0/}} 
+\strong{Notes}\\
+Lines 4, 10, 15, 22, and 28: The weird spacing prevents text wrapping from occurring in the middle of a word.
+
+Lines 13 and 48: The fx-5800P can only represent numbers on the range [\MINUS 1\EXPTEN 10,1\EXPTEN 10] as exact integers.
+
+Line 69: Pressing DEL (34) or EXIT (73) ends the program.
+
+Line 74: Pressing \UPTRIANG ~(84), \RIGHTTRIANG ~(86), + (77), or EXE (47) cycles to the next input argument display page.
+
+Line 79: Pressing \LEFTTRIANG ~(83), \DOWNTRIANG ~(85), or \MINUS ~(67) cycles to the previous input argument display page.
+
+\vspace{3ex}
+\scriptsize{Written in 2018 by Ben Tesch. To the extent possible under law, the author has dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed without any warranty. Published under the CC0 1.0 Universal Public Domain Dedication; see \url{http://creativecommons.org/publicdomain/zero/1.0/}} 
 \end{document}
 
 % Creative Commons Legal Code
