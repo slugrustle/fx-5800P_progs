@@ -86,7 +86,7 @@ WhileEnd
    for GCD(Z[1], ..., Z[D]). D∈[2,27].
 
 Z[D]➔B: through Next: Evaluate B = GCD(Z[1],
-   ..., Z[D]).  Uses GCD(β,γ,δ,ε) =
+   ..., Z[D]). Uses GCD(β,γ,δ,ε) =
    GCD(GCD(GCD(β,γ),δ),ε).
 
 1➔C: to end of program: Display result and 
