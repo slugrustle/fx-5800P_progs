@@ -1,5 +1,5 @@
-Least Common Multiple with User Input for the Casio fx-5800P Calculator
-https://github.com/slugrustle/fx-5800P_progs   Version 1
+﻿Least Common Multiple with User Input for the Casio fx-5800P Calculator
+https://github.com/slugrustle/fx-5800P_progs   Version 2
 
 0➔DimZ:
 27➔DimZ:
