@@ -2,15 +2,19 @@
 
 This repository contains Greatest Common Divisor (GCD) and
 Least Common Multiple (LCM) program listings for the Casio 
-fx-5800P programmable calculator. This lovely calculator ships
-without these useful routines, but it can be programmed to 
-remedy this deficit.
+fx-5800P programmable calculator.
 
 ## Getting Started
 
-Unfortunately, there is no computer interface for the Casio fx-5800P. 
-You will have to open the .pdf or .txt listing for the program of 
-interest and type the code into your calculator.
+Takumako's CcLinker and USB dongle provide the quickest way
+to transfer programs to the fx-5800P. See
+[https://cclinker.web.fc2.com/](https://cclinker.web.fc2.com/).
+The .cce and .ccl files in this repository are for use with
+CcEditor and CcLinker, respectively.
+
+Otherwise, you will have to open the .pdf or .txt listing
+for the program of interest and type the code into your
+calculator.
 
 ## Contributing
 
