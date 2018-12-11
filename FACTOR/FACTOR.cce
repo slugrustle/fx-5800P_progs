@@ -1,0 +1,130 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil MS UI Gothic;}{\f1\fnil\fcharset0 MS UI Gothic;}{\f2\fmodern\fprq6\fcharset134 SimSun;}{\f3\fnil SimSun;}{\f4\fnil\fcharset0 SimSun;}}
+{\colortbl ;\red128\green128\blue0;\red255\green140\blue0;\red0\green0\blue205;\red255\green255\blue255;\red70\green130\blue180;\red47\green79\blue79;\red34\green139\blue34;\red205\green133\blue63;}
+\viewkind4\uc1\pard\tx504\tx1008\tx1512\tx2016\tx2520\tx3024\tx3528\tx4032\tx4536\tx5040\tx5544\tx6048\tx6552\tx7056\tx7560\tx8064\tx8568\tx9072\tx9576\tx10080\tx10584\tx11088\tx11592\tx12096\tx12600\tx13104\tx13608\tx14112\tx14616\tx15120\tx15624\tx16128\cf1\f0\fs24 0\cf2\f1\u8594?\cf3\f0 DimZ\cf2\f1\u8629?\par
+\cf1\highlight4\f0 22\cf2\f1\u8594?\cf3\f0 DimZ\cf2\f1\u8629?\par
+\f0 "NUMBER"?\f1\u8594?\cf1\f0 F\cf2\f1\u8629?\par
+\cf5\f0 If \cf1 F\cf6 <\cf1 1\cf6  Or \cf1 F\cf6\f1\u8807?\cf1\f0 1\cf3 x\f1\u8321?\u8320?\cf1\f0 10\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 Then "NUMBER\f1\u9633?MUST\u9633?BE\u9633?\u9633?\u8807?1\u9633? And <1x\u8321?\u8320?10"\cf2\u8629?\par
+\cf0\tab\cf5\f0 Stop\cf2\f1\u8629?\par
+\cf5\f0 IfEnd\cf2\f1\u8629?\par
+\cf5\f0 If \cf1 F\cf6\f1\u8800?\cf3\f0 Int(\cf1 F\cf7 )\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 Then "NUMBER\f1\u9633?MUST\u9633?BE\u9633?\u9633?AN\u9633?INTEGER"\cf2\u8629?\par
+\cf0\tab\cf5\f0 Stop\cf2\f1\u8629?\par
+\cf5\f0 IfEnd\cf2\f1\u8629?\par
+\cf5\f0 For \cf1 1\cf2\f1\u8594?\cf1\f0 E\cf5  To \cf1 22\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 0\cf2\f1\u8594?\cf1\f0 Z\cf7 [\cf1 E\cf7 ]\cf2\f1\u8629?\par
+\cf5\f0 Next\cf2\f1\u8629?\par
+\cf1\f0 1\cf2\f1\u8594?\cf1\f0 Z\cf7 [\cf1 1\cf7 ]\cf2\f1\u8629?\par
+\cf1\f0 1\cf2\f1\u8594?\cf1\f0 Z\cf7 [\cf1 12\cf7 ]\cf2\f1\u8629?\par
+\cf1\f0 1\cf2\f1\u8594?\cf1\f0 E\cf2\f1\u8629?\par
+\cf1\f0 F\cf2\f1\u8594?\cf1\f0 A\cf2\f1\u8629?\par
+\cf3\f0 Int(\f1\u8730?(\cf1\f0 A\cf7 ))\cf2\f1\u8594?\cf1\f0 C\cf2\f1\u8629?\par
+\cf1\f0 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf1\f0 3\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf1\f0 5\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf1\f0 7\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf1\f0 11\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf5\f0 While \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 8\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 8\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 6\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 4\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 10\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 2\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 B\cf6 +\cf1 10\cf2\f1\u8594?\cf1\f0 B\cf6 :\cf1 A\cf6\f1\'f7\cf1\f0 B\cf2\f1\u8594?\cf1\f0 D\cf6 :\cf3 Frac(\cf1 D\cf7 )\cf6 =\cf1 0\cf5\f1\u8658?\cf8\f0 Prog "WFSUB"\cf6 :\cf1 B\cf6 >\cf1 C\cf5\f1\u8658?\cf8\f0 Goto \cf1 1\cf2\f1\u8629?\par
+\cf5\f0 WhileEnd\cf2\f1\u8629?\par
+\cf8\f0 Lbl \cf1 1\cf2\f1\u8629?\par
+\cf5\f0 If \cf1 A\cf6 >\cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 Then \cf1 E\cf6 +\cf1 1\cf2\f1\u8594?\cf1\f0 E\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 A\cf2\f1\u8594?\cf1\f0 Z\cf7 [\cf1 E\cf7 ]\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 1\cf2\f1\u8594?\cf1\f0 A\cf2\f1\u8629?\par
+\cf0\tab\cf1\f0 1\cf2\f1\u8594?\cf1\f0 Z\cf7 [\cf1 E\cf6 +\cf1 11\cf7 ]\cf2\f1\u8629?\par
+\cf5\f0 IfEnd\cf2\f1\u8629?\par
+\cf3\f0 Int(\cf1 E\cf6\f1\'f7\cf1\f0 3\cf7 )\cf2\f1\u8594?\cf1\f0 D\cf2\f1\u8629?\par
+\cf1\f0 E\cf6 -\cf1 3\cf6\f2\'a3\'f8\cf1\f3 D\cf6 >\cf1 0\cf5\f4\u8658?\cf1\f3 D\cf6 +\cf1 1\cf2\f4\u8594?\cf1\f3 D\cf2\f4\u8629?\par
+\cf1\f0 1\cf2\f1\u8594?\cf1\f0 C\cf2\f1\u8629?\par
+\cf8\f0 Lbl \cf1 2\cf2\f1\u8629?\par
+\f0 Cls\f1\u8629?\par
+\f0 Locate \cf1 1\cf6 ,\cf1 1\cf6 ,\cf1 F\cf2\f1\u8629?\par
+\f0 Locate \cf1 12\cf6 ,\cf1 1\cf6 ,\cf1 C\cf2\f1\u8629?\par
+\f0 Locate \cf1 13\cf6 ,\cf1 1\cf6 ,":"\cf2\f1\u8629?\par
+\f0 Locate \cf1 14\cf6 ,\cf1 1\cf6 ,\cf1 D\cf2\f1\u8629?\par
+\cf1\f0 3\cf6\f2\'a3\'f8\cf7\f3 (\cf1 C\cf6 -\cf1 1\cf7 )\cf6 +\cf1 1\cf2\f4\u8594?\cf1\f3 B\cf2\f4\u8629?\par
+\f0 Locate \cf1 1\cf6 ,\cf1 2\cf6 ,\cf1 Z\cf7 [\cf1 B\cf7 ]\cf2\f1\u8629?\par
+\f0 Locate \cf1 11\cf6 ,\cf1 2\cf6 ,"^("\cf2\f1\u8629?\par
+\f0 Locate \cf1 13\cf6 ,\cf1 2\cf6 ,\cf1 Z\cf7 [\cf1 B\cf6 +\cf1 11\cf7 ]\cf2\f1\u8629?\par
+\f0 Locate \cf1 16\cf6 ,\cf1 2\cf6 ,")"\cf2\f1\u8629?\par
+\cf5\f0 If \cf1 B\cf6 +\cf1 1\cf6\f1\u8806?\cf1\f0 E\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 Then \cf2 Locate \cf1 1\cf6 ,\cf1 3\cf6 ,\cf1 Z\cf7 [\cf1 B\cf6 +\cf1 1\cf7 ]\cf2\f1\u8629?\par
+\cf0\tab\cf2\f0 Locate \cf1 11\cf6 ,\cf1 3\cf6 ,"^("\cf2\f1\u8629?\par
+\cf0\tab\cf2\f0 Locate \cf1 13\cf6 ,\cf1 3\cf6 ,\cf1 Z\cf7 [\cf1 B\cf6 +\cf1 12\cf7 ]\cf2\f1\u8629?\par
+\cf0\tab\cf2\f0 Locate \cf1 16\cf6 ,\cf1 3\cf6 ,")"\cf2\f1\u8629?\par
+\cf5\f0 IfEnd\cf2\f1\u8629?\par
+\cf5\f0 If \cf1 B\cf6 +\cf1 2\cf6\f1\u8806?\cf1\f0 E\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 Then \cf2 Locate \cf1 1\cf6 ,\cf1 4\cf6 ,\cf1 Z\cf7 [\cf1 B\cf6 +\cf1 2\cf7 ]\cf2\f1\u8629?\par
+\cf0\tab\cf2\f0 Locate \cf1 11\cf6 ,\cf1 4\cf6 ,"^("\cf2\f1\u8629?\par
+\cf0\tab\cf2\f0 Locate \cf1 13\cf6 ,\cf1 4\cf6 ,\cf1 Z\cf7 [\cf1 B\cf6 +\cf1 13\cf7 ]\cf2\f1\u8629?\par
+\cf0\tab\cf2\f0 Locate \cf1 16\cf6 ,\cf1 4\cf6 ,")"\cf2\f1\u8629?\par
+\cf5\f0 IfEnd\cf2\f1\u8629?\par
+\cf5\f0 While \cf1 1\cf2\f1\u8629?\par
+\cf0\tab\cf2\f0 Getkey\f1\u8594?\cf1\f0 A\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 If \cf1 A\cf6 =\cf1 34\cf6  Or \cf1 A\cf6 =\cf1 73\cf2\f1\u8629?\par
+\cf0\tab\tab\cf5\f0 Then \cf2 Cls\f1\u8629?\par
+\cf0\tab\tab\cf2\f0 "DONE"\f1\u8629?\par
+\cf0\tab\tab\cf5\f0 Stop\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 IfEnd\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 If \cf1 A\cf6 =\cf1 84\cf6  Or \cf1 A\cf6 =\cf1 86\cf6  Or \cf1 A\cf6 =\cf1 77\cf6  Or \cf1 A\cf6 =\cf1 47\cf2\f1\u8629?\par
+\cf0\tab\tab\cf5\f0 Then \cf1 C\cf6 +\cf1 1\cf2\f1\u8594?\cf1\f0 C\cf2\f1\u8629?\par
+\cf0\tab\tab\cf1\f0 C\cf6 >\cf1 D\cf5\f1\u8658?\cf1\f0 1\cf2\f1\u8594?\cf1\f0 C\cf2\f1\u8629?\par
+\cf0\tab\tab\cf8\f0 Goto \cf1 2\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 IfEnd\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 If \cf1 A\cf6 =\cf1 83\cf6  Or \cf1 A\cf6 =\cf1 85\cf6  Or \cf1 A\cf6 =\cf1 67\cf2\f1\u8629?\par
+\cf0\tab\tab\cf5\f0 Then \cf1 C\cf6 -\cf1 1\cf2\f1\u8594?\cf1\f0 C\cf2\f1\u8629?\par
+\cf0\tab\tab\cf1\f0 C\cf6 <\cf1 1\cf5\f1\u8658?\cf1\f0 D\cf2\f1\u8594?\cf1\f0 C\cf2\f1\u8629?\par
+\cf0\tab\tab\cf8\f0 Goto \cf1 2\cf2\f1\u8629?\par
+\cf0\tab\cf5\f0 IfEnd\cf2\f1\u8629?\par
+\cf5\f0 WhileEnd\cf2\f1\u8629?\par
+\cf0\highlight0\par
+}
+ 

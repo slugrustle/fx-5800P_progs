@@ -1,0 +1,434 @@
+% Integer Factorization for the Casio fx-5800P calculator.
+% Takes and validates user input number on the range [1,9999999999];
+% displays results and input in a nice format.
+%
+% Written in 2018 by Ben Tesch
+%
+% To the extent possible under law, the author has dedicated
+% all copyright and related and neighboring rights to this
+% software to the public domain worldwide. This software is
+% distributed without any warranty.
+%
+% This software is released under the CC0 1.0 Universal Public
+% Domain Dedication, reproduced at the bottom of this file.
+% See also http://creativecommons.org/publicdomain/zero/1.0/
+
+\RequirePackage{luatex85}
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{geometry}
+\geometry{
+letterpaper,
+top=0.65in,
+bottom=0.4in,
+left=0.65in,
+right=0.4in,
+marginpar=0pt,
+footskip=0.4in,
+headheight=0pt,
+includefoot
+}
+
+\usepackage{multicol}
+\setlength{\columnsep}{2em}
+
+\usepackage{lineno}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage\ / \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%\usepackage{showframe}
+\usepackage{titling}
+\setlength{\droptitle}{-0.5in}
+\pretitle{\begin{flushleft}}
+    \posttitle{\end{flushleft}}
+\preauthor{\begin{flushleft}}
+    \postauthor{\end{flushleft}}
+\predate{}
+\date{}
+\postdate{}
+
+\usepackage{fontspec}
+\setmainfont{DejaVu Sans Mono}
+
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+
+\setlength\parindent{0pt}
+
+\newcommand{\STO}{{\large ^^^^2794}}
+\newcommand{\DISP}{^^^^25e2}
+\newcommand{\CBR}{{\Large ^^^^21d2}}
+\newcommand{\NEQ}{^^^^2260}
+\newcommand{\LEQ}{^^^^2264}
+\newcommand{\GEQ}{^^^^2265}
+\newcommand{\MUL}{^^^^00d7}
+\newcommand{\DIV}{^^^^00f7}
+\newcommand{\MINUS}{^^^^2212}
+\newcommand{\EXPTEN}{{\scriptsize X10}}
+\newcommand{\SQRT}{^^^^221a}
+
+\newcommand{\ELEM}{^^^^2208}
+\newcommand{\ALPHA}{^^^^03b1}
+\newcommand{\BETA}{^^^^03b2}
+\newcommand{\GAMMA}{^^^^03b3}
+\newcommand{\DELTA}{^^^^03b4}
+\newcommand{\EPSILON}{^^^^03b5}
+\newcommand{\UPTRIANG}{^^^^25b2}
+\newcommand{\RIGHTTRIANG}{^^^^25b6}
+\newcommand{\DOWNTRIANG}{^^^^25bc}
+\newcommand{\LEFTTRIANG}{^^^^25c0}
+
+\newdimen{\BaseIndent}
+\setlength{\BaseIndent}{3ex}
+\newcommand{\IDENT}[1]{\hspace*{#1\BaseIndent}}
+
+\begin{document}
+\title{Integer Factorization with User Input for the Casio fx-5800P Calculator}
+\author{\url{https://github.com/slugrustle/fx-5800P_progs} \quad Version 1}
+\maketitle
+\thispagestyle{fancy}
+\begin{multicols}{2}
+Program \strong{WFSUB}
+
+\begin{linenumbers}[1]
+E+1\STO E:\\
+B\STO Z[E]:\\
+Do:\\
+\IDENT{1}D\STO A:\\
+\IDENT{1}Z[E+11]+1\STO Z[E+11]:\\
+\IDENT{1}A\DIV B\STO D:\\
+LpWhile Frac(D)=0:\\
+Int(\SQRT(A))\STO C:\\
+Return
+\end{linenumbers}
+
+\strong{Program Outline}\\
+Lines 1\textendash 2: Increment number of unique factors and store B as a unique factor.
+
+Lines 3\textendash 7: Divide out powers of B from A, incrementing the exponent of B in factor storage.
+
+\strong{Variable Descriptions}\\
+A: Unfactored part of original input number.
+
+B: Known factor of A.
+
+C: Largest remaining factor in A, assuming A is composite.
+
+D: Temporary storage for A\DIV B.
+
+E: Number of stored unique factors (ignoring powers). E\,\ELEM \,[1,11].
+\vspace{3ex}
+
+Program \strong{FACTOR}
+
+\begin{linenumbers}[1]
+0\STO DimZ:\\
+22\STO DimZ:\\
+"NUMBER"?\STO F:\\
+If F<1 Or F\GEQ 1\EXPTEN 10:\\
+\IDENT{1}Then "NUMBER MUST BE ~\GEQ 1 And <1\EXPTEN 10":\\
+\IDENT{1}Stop:\\
+IfEnd:\\
+If F\NEQ Int(F):\\
+\IDENT{1}Then "NUMBER MUST BE ~AN INTEGER":\\
+\IDENT{1}Stop:\\
+IfEnd:\\
+For 1\STO E To 22:\\
+\IDENT{1}0\STO Z[E]:\\
+Next:\\
+1\STO Z[1]:\\
+1\STO Z[12]:\\
+1\STO E:\\
+F\STO A:\\
+Int(\SQRT (A))\STO C:
+\end{linenumbers}
+\end{multicols}
+\begin{linenumbers}
+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+3\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+5\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+7\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+11\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+While 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+8\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+8\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+6\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+4\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+10\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+2\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+\IDENT{1}B+10\STO B:A\DIV B\STO D:Frac(D)=0\CBR Prog "WFSUB":B>C\CBR Goto 1:\\
+WhileEnd:
+\end{linenumbers}
+\begin{multicols}{2}
+\begin{linenumbers}
+\strong{Lbl 1}:\\
+If A>1:\\
+\IDENT{1}Then E+1\STO E:\\
+\IDENT{1}A\STO Z[3]:\\
+\IDENT{1}1\STO A:\\
+\IDENT{1}1\STO Z[E+11]:\\
+IfEnd:\\
+Int(E\DIV 3)\STO D:\\
+E\MINUS 3\MUL D>0\CBR D+1\STO D:\\
+1\STO C:\\
+\strong{Lbl 2}:\\
+Cls:\\
+Locate 1,1,F:\\
+Locate 12,1,C:\\
+Locate 13,1,":":\\
+Locate 14,1,D:\\
+3\MUL(C\MINUS 1)+1\STO B:\\
+Locate 1,2,Z[B]:\\
+Locate 11,2,"\textasciicircum (":\\
+Locate 13,2,Z[B+11]:\\
+Locate 16,2,")":\\
+If B+1\LEQ E:\\
+\IDENT{1}Then Locate 1,3,Z[B+1]:\\
+\IDENT{1}Locate 11,3,"\textasciicircum (":\\
+\IDENT{1}Locate 13,3,Z[B+12]:\\
+\IDENT{1}Locate 16,3,")":\\
+IfEnd:\\
+If B+2\LEQ E:\\
+\IDENT{1}Then Locate 1,4,Z[B+2]:\\
+\IDENT{1}Locate 11,4,"\textasciicircum (":\\
+\IDENT{1}Locate 13,4,Z[B+13]:\\
+\IDENT{1}Locate 16,4,")":\\
+IfEnd:\\
+While 1:\\
+\IDENT{1}GetKey\STO A:\\
+\IDENT{1}If A=34 Or A=73:\\
+\IDENT{2}Then Cls:\\
+\IDENT{2}"DONE":\\
+\IDENT{2}Stop:\\
+\IDENT{1}IfEnd:\\
+\IDENT{1}If A=84 Or A=86 Or A=77 Or A=47:\\
+\IDENT{2}Then C+1\STO C:\\
+\IDENT{2}C>D\CBR 1\STO C:\\
+\IDENT{2}\strong{Goto 2}:\\
+\IDENT{1}IfEnd:\\
+\IDENT{1}If A=83 Or A=85 Or A=67:\\
+\IDENT{2}Then C\MINUS 1\STO C:\\
+\IDENT{2}C<1\CBR D\STO C:\\
+\IDENT{2}\strong{Goto 2}:\\
+\IDENT{1}IfEnd:\\
+WhileEnd
+\end{linenumbers}
+
+
+\strong{Program Outline}\\
+Lines 1\textendash 2: Set up memory for storing 11 factors in the form Z[\ALPHA]\textasciicircum Z[\ALPHA +11] where \ALPHA\,\ELEM \,[1,11].
+
+Lines 3\textendash 11: User input of number to be factored.
+
+Lines 12\textendash 17: Zero out factor storage and store 1\textasciicircum 1 as the first factor.
+
+Lines 18\textendash 81: Wheel factorization of input with a basis of 2, 3, 5, and 7.
+
+Lines 82\textendash 125: Display factors and original input number.
+
+\strong{Variable Descriptions}\\
+A: Unfactored part of original input number and identifier of the most recently pressed key.
+
+B: Known factor of A and index of displayed factor.
+
+C: Largest remaining factor in A (assuming A is composite) and number of displayed factor page.
+
+D: Temporary storage for A\DIV B and number of factor display pages.
+
+E: Number of unique factors in factor storage (ignoring powers). E\,\ELEM \,[1,11].
+
+F: Number to be factored (input by user).
+
+\strong{Notes}\\
+There is only storage for 11 unique factors because 6469693230 =\\
+1\MUL 2\MUL 3\MUL 5\MUL 7\MUL 11\MUL 13\MUL 17\MUL 19\MUL 23\MUL 29 has the most unique factors of any number on the range [1,1\EXPTEN 10].
+
+Line 4: The fx-5800P can only represent numbers on the range [\MINUS 1\EXPTEN 10,1\EXPTEN 10] as exact integers.
+
+Lines 5 and 9: The weird spacing prevents text wrapping from occurring in the middle of a word.
+
+Line 110: Pressing DEL~(34) or EXIT~(73) ends the program.
+
+Line 115: Pressing \UPTRIANG~(84), \RIGHTTRIANG~(86), +~(77), or EXE~(47) cycles to the next factor display page.
+
+Line 120: Pressing \LEFTTRIANG~(83), \DOWNTRIANG~(85), or \MINUS~(67) cycles to the previous factor display page.
+
+\vspace{3ex}
+\scriptsize{Written in 2018 by Ben Tesch. To the extent possible under law, the author has dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed  without any warranty. Published under the CC0 1.0 Universal Public Domain Dedication; see \url{http://creativecommons.org/publicdomain/zero/1.0/}} 
+\end{multicols}
+\end{document}
+
+% Creative Commons Legal Code
+% 
+% CC0 1.0 Universal
+% 
+%     CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
+%     LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
+%     ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
+%     INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES
+%     REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+%     PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
+%     THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
+%     HEREUNDER.
+% 
+% Statement of Purpose
+% 
+% The laws of most jurisdictions throughout the world automatically confer
+% exclusive Copyright and Related Rights (defined below) upon the creator
+% and subsequent owner(s) (each and all, an "owner") of an original work of
+% authorship and/or a database (each, a "Work").
+% 
+% Certain owners wish to permanently relinquish those rights to a Work for
+% the purpose of contributing to a commons of creative, cultural and
+% scientific works ("Commons") that the public can reliably and without fear
+% of later claims of infringement build upon, modify, incorporate in other
+% works, reuse and redistribute as freely as possible in any form whatsoever
+% and for any purposes, including without limitation commercial purposes.
+% These owners may contribute to the Commons to promote the ideal of a free
+% culture and the further production of creative, cultural and scientific
+% works, or to gain reputation or greater distribution for their Work in
+% part through the use and efforts of others.
+% 
+% For these and/or other purposes and motivations, and without any
+% expectation of additional consideration or compensation, the person
+% associating CC0 with a Work (the "Affirmer"), to the extent that he or she
+% is an owner of Copyright and Related Rights in the Work, voluntarily
+% elects to apply CC0 to the Work and publicly distribute the Work under its
+% terms, with knowledge of his or her Copyright and Related Rights in the
+% Work and the meaning and intended legal effect of CC0 on those rights.
+% 
+% 1. Copyright and Related Rights. A Work made available under CC0 may be
+% protected by copyright and related or neighboring rights ("Copyright and
+% Related Rights"). Copyright and Related Rights include, but are not
+% limited to, the following:
+% 
+%   i. the right to reproduce, adapt, distribute, perform, display,
+%      communicate, and translate a Work;
+%  ii. moral rights retained by the original author(s) and/or performer(s);
+% iii. publicity and privacy rights pertaining to a person's image or
+%      likeness depicted in a Work;
+%  iv. rights protecting against unfair competition in regards to a Work,
+%      subject to the limitations in paragraph 4(a), below;
+%   v. rights protecting the extraction, dissemination, use and reuse of data
+%      in a Work;
+%  vi. database rights (such as those arising under Directive 96/9/EC of the
+%      European Parliament and of the Council of 11 March 1996 on the legal
+%      protection of databases, and under any national implementation
+%      thereof, including any amended or successor version of such
+%      directive); and
+% vii. other similar, equivalent or corresponding rights throughout the
+%      world based on applicable law or treaty, and any national
+%      implementations thereof.
+% 
+% 2. Waiver. To the greatest extent permitted by, but not in contravention
+% of, applicable law, Affirmer hereby overtly, fully, permanently,
+% irrevocably and unconditionally waives, abandons, and surrenders all of
+% Affirmer's Copyright and Related Rights and associated claims and causes
+% of action, whether now known or unknown (including existing as well as
+% future claims and causes of action), in the Work (i) in all territories
+% worldwide, (ii) for the maximum duration provided by applicable law or
+% treaty (including future time extensions), (iii) in any current or future
+% medium and for any number of copies, and (iv) for any purpose whatsoever,
+% including without limitation commercial, advertising or promotional
+% purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each
+% member of the public at large and to the detriment of Affirmer's heirs and
+% successors, fully intending that such Waiver shall not be subject to
+% revocation, rescission, cancellation, termination, or any other legal or
+% equitable action to disrupt the quiet enjoyment of the Work by the public
+% as contemplated by Affirmer's express Statement of Purpose.
+% 
+% 3. Public License Fallback. Should any part of the Waiver for any reason
+% be judged legally invalid or ineffective under applicable law, then the
+% Waiver shall be preserved to the maximum extent permitted taking into
+% account Affirmer's express Statement of Purpose. In addition, to the
+% extent the Waiver is so judged Affirmer hereby grants to each affected
+% person a royalty-free, non transferable, non sublicensable, non exclusive,
+% irrevocable and unconditional license to exercise Affirmer's Copyright and
+% Related Rights in the Work (i) in all territories worldwide, (ii) for the
+% maximum duration provided by applicable law or treaty (including future
+% time extensions), (iii) in any current or future medium and for any number
+% of copies, and (iv) for any purpose whatsoever, including without
+% limitation commercial, advertising or promotional purposes (the
+% "License"). The License shall be deemed effective as of the date CC0 was
+% applied by Affirmer to the Work. Should any part of the License for any
+% reason be judged legally invalid or ineffective under applicable law, such
+% partial invalidity or ineffectiveness shall not invalidate the remainder
+% of the License, and in such case Affirmer hereby affirms that he or she
+% will not (i) exercise any of his or her remaining Copyright and Related
+% Rights in the Work or (ii) assert any associated claims and causes of
+% action with respect to the Work, in either case contrary to Affirmer's
+% express Statement of Purpose.
+% 
+% 4. Limitations and Disclaimers.
+% 
+%  a. No trademark or patent rights held by Affirmer are waived, abandoned,
+%     surrendered, licensed or otherwise affected by this document.
+%  b. Affirmer offers the Work as-is and makes no representations or
+%     warranties of any kind concerning the Work, express, implied,
+%     statutory or otherwise, including without limitation warranties of
+%     title, merchantability, fitness for a particular purpose, non
+%     infringement, or the absence of latent or other defects, accuracy, or
+%     the present or absence of errors, whether or not discoverable, all to
+%     the greatest extent permissible under applicable law.
+%  c. Affirmer disclaims responsibility for clearing rights of other persons
+%     that may apply to the Work or any use thereof, including without
+%     limitation any person's Copyright and Related Rights in the Work.
+%     Further, Affirmer disclaims responsibility for obtaining any necessary
+%     consents, permissions or other rights required for any use of the
+%     Work.
+%  d. Affirmer understands and acknowledges that Creative Commons is not a
+%     party to this document and has no duty or obligation with respect to
+%     this CC0 or use of the Work.
+% 
