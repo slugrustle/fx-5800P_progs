@@ -114,13 +114,12 @@ inline double Frac(const double &number)
  * 1. E holds number of factors (ignoring powers)
  *    and must lie on the range [1,11].
  *
- *    a. F is limited to 11 because 
- *       2 * 3 * 5 * 7 * 11 * 13 * 17 * 19 * 23 * 29
- *       is the largest set of unique prime factors whose
- *       product is less than or equal to 9999999999, the
+ *    a. E is limited to 11 because 
+ *       1 * 2 * 3 * 5 * 7 * 11 * 13 * 17 * 19 * 23 * 29
+ *       is the largest set of unique factors whose
+ *       product is less than or equal to 10000000000, the
  *       largest number in the range represented as exact
- *       integers in the fx-5800P, and this program also
- *       stores 1 as a factor.
+ *       integers in the fx-5800P.
  *
  * 2. Z_[E] holds B.
  * 
@@ -152,7 +151,7 @@ void WFSUB(void)
  * Stores factors of A in Z_[1] through Z_[22] per the
  * comment above WFSUB.
  * Modifies, A, B, C, D, E, and Z_[1] through Z_[22].
- * Calls WFSUB and WFFIN.
+ * Calls WFSUB.
  */
 void WHEELFAC(void)
 {
