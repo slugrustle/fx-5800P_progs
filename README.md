@@ -1,8 +1,8 @@
 # fx-5800P\_progs
 
-This repository contains Greatest Common Divisor (GCD) and
-Least Common Multiple (LCM) program listings for the Casio 
-fx-5800P programmable calculator.
+This repository contains Greatest Common Divisor (GCD),
+Least Common Multiple (LCM), and Integer Factorization (FACTOR)
+program listings for the Casio fx-5800P programmable calculator.
 
 ## Getting Started
 
@@ -28,7 +28,7 @@ Ben Tesch - [slugrustle](https://github.com/slugrustle)
 
 ## License
 
-The GCD and LCM programs in this repository are distributed under the 
+The GCD, LCM, and FACTOR programs in this repository are distributed under the 
 [CC0 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 See also LICENSE.txt or the .tex or .txt file for each program.
 
