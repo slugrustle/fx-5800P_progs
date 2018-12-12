@@ -1,7 +1,8 @@
 /**
  * wheel_fac_test.cpp - A wheel factorization routine and its test code.
- * The factorization routine is intended to be ported to the
- * Casio fx-5800P calculator.
+ * WHEELFAC() is intended to match the non-user-interface part of the
+ * FACTOR routine written for the Casio fx-5800P calculator, and WFSUB()
+ * is intended to match the WFSUB routine.
  *
  * Written in 2018 by Ben Tesch.
  *
@@ -94,7 +95,7 @@ double W;
 double X;
 double Y;
 double Z;
-double Z_[21];
+double Z_[23];
 
 /**
  * Implements the Casio fx-5800P Frac( function using
@@ -102,7 +103,8 @@ double Z_[21];
  */
 inline double Frac(const double &number)
 {
-  return number - std::trunc(number);
+  double scratch;
+  return std::modf(number, &scratch);
 }
 
 /**
