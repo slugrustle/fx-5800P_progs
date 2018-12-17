@@ -1,6 +1,8 @@
-The GCD (Greatest Common Divisor) and LCM (Least Common Multiple)
-programs in the fx-5800P_progs repository are published under the 
-CC0 1.0 Universal Public Domain Dedication, which is reproduced below.
+The GCD (Greatest Common Divisor), LCM (Least Common Multiple) and
+FACTOR (Integer Factorization) programs, the subroutine WFSUB, and the
+test code wheel_fac_test.cpp in the fx-5800P_progs repository are published
+under the CC0 1.0 Universal Public Domain Dedication, which is reproduced
+below.
 
 Creative Commons Legal Code
 
