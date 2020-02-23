@@ -1,8 +1,37 @@
-The GCD (Greatest Common Divisor), LCM (Least Common Multiple) and
-FACTOR (Integer Factorization) programs, the subroutine WFSUB, and the
-test code wheel_fac_test.cpp in the fx-5800P_progs repository are published
-under the CC0 1.0 Universal Public Domain Dedication, which is reproduced
-below.
+All files produced by the author of this repository, including
+
+[FACTOR/ directory]
+  CASIO_fx-5800P_FACTOR.pdf
+  CASIO_fx-5800P_FACTOR.tex
+  CASIO_fx-5800P_FACTOR.txt
+  FACTOR COMP.ccl
+  FACTOR.cce
+  makefile-nmake
+  makefile-unix
+  WFSUB COMP.ccl
+  WFSUB.cce
+  wheel_fac_test.cpp
+
+[GCD/ directory]
+  CASIO_fx-5800P_GCD.pdf
+  CASIO_fx-5800P_GCD.tex
+  CASIO_fx-5800P_GCD.txt
+  GCD COMP.ccl
+  GCD.cce
+
+[LCM/ directory]
+  CASIO_fx-5800P_LCM.pdf
+  CASIO_fx-5800P_LCM.tex
+  CASIO_fx-5800P_LCM.txt
+  LCM COMP.ccl
+  LCM.cce
+
+[Root directory]
+  LICENSE.txt
+  README.md
+
+are published under the CC0 1.0 Universal Public Domain Dedication,
+which is reproduced below.
 
 Creative Commons Legal Code
 

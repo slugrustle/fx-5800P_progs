@@ -1,0 +1,18 @@
+# Run 
+# make -f makefile-unix
+# from the command line to build all executables in this directory.
+#
+# Run 
+# make -f makefile-unix clean
+# to delete the executable created during the build.
+
+BASE_OPTIONS = -Wall -O3 -static -static-libstdc++ -std=c++14 -flto -march=athlon64 
+EXE_FILES = wheel_fac_test
+
+all: $(EXE_FILES)
+
+wheel_fac_test:wheel_fac_test.cpp
+	g++ $(BASE_OPTIONS) -o $@ wheel_fac_test.cpp
+
+clean:
+	rm -f $(EXE_FILES)

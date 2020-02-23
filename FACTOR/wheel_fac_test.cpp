@@ -5,6 +5,7 @@
  * is intended to match the WFSUB routine.
  *
  * Written in 2018 by Ben Tesch.
+ * Originally distributed at https://github.com/slugrustle/fx-5800P_progs
  *
  * To the extent possible under law, the author has dedicated all copyright
  * and related and neighboring rights to this software to the public domain
@@ -255,12 +256,14 @@ int main(int argc, char *argv[])
   try { istart = std::stoll(argv[1]); }
   catch (const std::out_of_range &e)
   {
+    e;
     std::printf("ERROR: start argument exceeds range of int64\n");
     std::printf("       pick start on range [1,9999999999]\n\n");
     return 0;
   }
   catch (const std::invalid_argument &e)
   {
+    e;
     std::printf("ERROR: could not convert start argument to integer\n\n");
     return 0;
   }
@@ -274,12 +277,14 @@ int main(int argc, char *argv[])
   try { iend = std::stoll(argv[2]); }
   catch (const std::out_of_range &e)
   {
+    e;
     std::printf("ERROR: end argument exceeds range of int64\n");
     std::printf("       pick end on range [1,9999999999]\n\n");
     return 0;
   }
   catch (const std::invalid_argument &e)
   {
+    e;
     std::printf("ERROR: could not convert end argument to integer\n\n");
     return 0;
   }
@@ -298,11 +303,13 @@ int main(int argc, char *argv[])
   try { istride = std::stoll(argv[3]); }
   catch (const std::out_of_range &e)
   {
+    e;
     std::printf("ERROR: stride argument exceeds range of int64\n\n");
     return 0;
   }
   catch (const std::invalid_argument &e)
   {
+    e;
     std::printf("ERROR: could not convert stride argument to integer\n\n");
     return 0;
   }

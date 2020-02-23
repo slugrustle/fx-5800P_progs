@@ -1,0 +1,28 @@
+# Run 
+# nmake /F makefile-nmake 
+# from the Visual Studio Command Prompt to build all executables
+# in this directory.
+#
+# Run 
+# nmake /F makefile-nmake clean
+# to delete all .exe and .obj files created during the build.
+#
+# Run 
+# nmake /F makefile-nmake cleanobj
+# to delete all .obj files created during the build.
+
+BASE_OPTIONS = /O2 /Ob2 /Oi /Ot /Oy /Za /Zc:wchar_t- /Zc:inline /Zc:rvalueCast /Zc:forScope /GR- /GF /Gm- /GS- /GT /Gy /EHsc /guard:cf- /fp:strict /fp:except /Qspectre- /Qpar- /GL /permissive- /nologo /Y- /utf-8 /validate-charset /W4 /MT
+LINK_OPTIONS = /link /INCREMENTAL:NO /OPT:REF /OPT:ICF /DYNAMICBASE:NO /NXCOMPAT:NO /LTCG /MACHINE:X64
+OBJ_FILES = wheel_fac_test.obj
+EXE_FILES = wheel_fac_test.exe
+
+all: $(EXE_FILES)
+
+wheel_fac_test.exe:wheel_fac_test.cpp
+	cl $(BASE_OPTIONS) wheel_fac_test.cpp $(LINK_OPTIONS) /OUT:$(@F)
+
+clean:
+	del $(EXE_FILES) $(OBJ_FILES)
+
+cleanobj:
+	del $(OBJ_FILES)

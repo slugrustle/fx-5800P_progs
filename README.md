@@ -1,14 +1,14 @@
-# fx-5800P\_progs
+# fx&#x2011;5800P\_progs
 
 This repository contains Greatest Common Divisor (GCD),
 Least Common Multiple (LCM), and Integer Factorization (FACTOR)
-program listings for the Casio fx-5800P programmable calculator.
+program listings for the Casio fx&#x2011;5800P programmable calculator.
 
 ## Getting Started
 
 Takumako's CcLinker and USB dongle provide the quickest way
-to transfer programs to the fx-5800P. See
-[https://cclinker.web.fc2.com/](https://cclinker.web.fc2.com/).
+to transfer programs to the fx&#x2011;5800P. See
+[https://cclinkerdongle.web.fc2.com/index.html](https://cclinkerdongle.web.fc2.com/index.html).
 The .cce and .ccl files in this repository are for use with
 CcEditor and CcLinker, respectively.
 
@@ -38,5 +38,5 @@ See also LICENSE.txt or the .tex or .txt file for each program.
 the .pdf program listings that appear in this repository.
 
 The [DejaVu Fonts](https://dejavu-fonts.github.io/) have sufficient unicode coverage
-to display the various special characters used by fx-5800P programs. These fonts
+to display the various special characters used by fx&#x2011;5800P programs. These fonts
 appear in the .pdf program listings.
